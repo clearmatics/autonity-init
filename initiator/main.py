@@ -70,7 +70,6 @@ def main():
                         help='Type of peer. For validators will be generated node.key (default: %(default)s)'
                         )
     args = parser.parse_args()
-    print(args.peer_type)
 
     if not listdir(keys_path):
         import_account()
