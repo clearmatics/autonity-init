@@ -1,4 +1,4 @@
-FROM clearmatics/autonity:k8s-latest as autonity
+FROM clearmatics/autonity:k8s-0.0.1 as autonity
 
 FROM python:3.7.3-alpine
 
