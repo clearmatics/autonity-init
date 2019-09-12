@@ -3,6 +3,7 @@
 import subprocess
 import sys
 from os import listdir
+from os import path
 
 # Default file path
 priv_key_path = '/autonity/sec-peers/private_key'
@@ -46,9 +47,9 @@ def blockchain_init():
 def main():
     if not listdir(keys_path):
         import_account()
-    if not listdir(blockchain_path):
+    if not path.exists(blockchain_path + 'autonity'):
         blockchain_init()
-
+    print('INFO: Initial steps complited without errors')
 
 if __name__ == '__main__':
     main()

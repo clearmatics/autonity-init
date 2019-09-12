@@ -9,4 +9,14 @@ This container used for initialisation autonity in kubernetes cluster
    1. if `validator`:  generate `node.key`
 1. if `blockchain` not exist:
    1. `autonity init` (get `genesis.json` from k8s configmap)
- 
+
+# Docker usage
+
+Docker build
+```shell script
+docker build -t autonity-init .
+```
+Docker run
+```shell script
+docker run -ti --rm -v $(pwd)/tmp:/autonity autonity-init --n autonity-init
+```
