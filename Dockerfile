@@ -1,4 +1,4 @@
-FROM clearmatics/autonity:dev-0.1.6-ethstats as autonity
+FROM clearmatics/autonity:v0.1.6 as autonity
 
 FROM python:3.7.3-alpine
 
