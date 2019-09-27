@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.0] - 2019-09-27
+- Autonity base image `dev-0.2.0-prerelease`
+
 ## [0.0.8] - 2019-09-03
 - Autonity base image `dev-v0.1.5`
 
