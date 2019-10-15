@@ -2,6 +2,7 @@
 
 import subprocess
 import sys
+import time
 import argparse
 from os import path
 
@@ -65,7 +66,6 @@ def main():
                         )
     args = parser.parse_args()
 
-
     if not path.exists(keys_path + '/keystore'):
         print('INFO ==== Start import private key to autonity account')
         import_account(args.debug)
@@ -73,6 +73,10 @@ def main():
         print('INFO ==== Skip autonity account private key import: ' + keys_path + '/keystore is already exist.')
     if not path.exists(blockchain_path + 'autonity'):
         print('INFO ==== Start autonity init step')
+        if not path.exists(genesis_path) and args.debug:
+            print('Waiting until ' + genesis_path + ' will present ...')
+        while not path.exists(genesis_path):
+            time.sleep(10)
         blockchain_init(args.debug)
     else:
         print('INFO ==== Skip autonity init step: ' + blockchain_path + 'autonity is already exist.')
