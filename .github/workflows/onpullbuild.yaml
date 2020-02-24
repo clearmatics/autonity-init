@@ -1,0 +1,26 @@
+name: autonity POC for jfrog
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    name: autonity POC for jfrog
+    runs-on: ubuntu-18.04
+
+
+    steps:
+
+      - name: 'Checkout'
+        uses: actions/checkout@v1
+
+      - name: Docker Build 
+        run: |
+          TAG=`git log -1 --pretty=%h`
+          echo "${{ secrets.DOCKER_PASSWORD}}" | docker login -u "${{ secrets.DOCKER_USERNAME}}" --password-stdin  clearmatics-dev-repo-clearmatics.jfrog.io 
+          docker build -t autonity-init:$TAG .
+          docker tag autonity-init:$TAG clearmatics-dev-repo-clearmatics.jfrog.io/autonity-init
+          docker push clearmatics-dev-repo-clearmatics.jfrog.io/autonity-init
+
+    
