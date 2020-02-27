@@ -18,8 +18,16 @@ jobs:
       - name: Docker Build 
         run: |
           TAG=`git log -1 --pretty=%h`
+<<<<<<< HEAD
           echo "${{ secrets.JFROG_DOCKER_PASSWORD}}" | docker login -u "${{ secrets.JFROG_DOCKER_USERNAME}}" --password-stdin  clearmatics-dev-docker.jfrog.io 
+=======
+          echo "${{ secrets.JFROG_DOCKER_PASSWORD}}" | docker login -u "${{ secrets.JFROG_DOCKER_USERNAME}}" --password-stdin  clearmatics-dev-repo-clearmatics.jfrog.io 
+>>>>>>> c952ed01db4173893253b5bc2a556896a1843a3b
           docker build -t autonity-init:$TAG .
           docker tag autonity-init:$TAG clearmatics-dev-docker.jfrog.io/autonity-init
           docker push clearmatics-dev-docker.jfrog.io/autonity-init
 
+<<<<<<< HEAD
+=======
+          
+>>>>>>> c952ed01db4173893253b5bc2a556896a1843a3b
