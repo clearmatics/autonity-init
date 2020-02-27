@@ -27,7 +27,3 @@ jobs:
           docker tag autonity-init:$TAG clearmatics-dev-docker.jfrog.io/autonity-init
           docker push clearmatics-dev-docker.jfrog.io/autonity-init
 
-<<<<<<< HEAD
-=======
-          
->>>>>>> c952ed01db4173893253b5bc2a556896a1843a3b
