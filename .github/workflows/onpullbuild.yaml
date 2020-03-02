@@ -15,7 +15,7 @@ jobs:
       - name: 'Checkout'
         uses: actions/checkout@v1
 
-      - name: Docker Build 
+      - name: Docker Build and Push to Jfrog registry
         run: |
           TAG=`git log -1 --pretty=%h`
           echo "${{ secrets.JFROG_DOCKER_PASSWORD}}" | docker login -u "${{ secrets.JFROG_DOCKER_USERNAME}}" --password-stdin  clearmatics-dev-docker.jfrog.io 
