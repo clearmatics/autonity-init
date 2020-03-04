@@ -21,7 +21,7 @@ jobs:
           echo "${{ secrets.JFROG_DOCKER_PASSWORD}}" | docker login -u "${{ secrets.JFROG_DOCKER_USERNAME}}" --password-stdin  clearmatics-dev-docker.jfrog.io
           export DOCKER_CONTENT_TRUST=1
           export DOCKER_CONTENT_TRUST_SERVER=https://notary.docker.io:4443 
-          docker build -t autonity-init:$TAG .
+          sudo docker build -t autonity-init:$TAG .
           docker tag autonity-init:$TAG clearmatics-dev-docker.jfrog.io/autonity-init:$TAG
           docker push clearmatics-dev-docker.jfrog.io/autonity-init:$TAG
 
