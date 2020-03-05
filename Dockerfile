@@ -1,4 +1,4 @@
-FROM clearmatics/autonity:dev-0.3.0-fix as autonity
+FROM clearmatics/autonity:dev-0.3.2 as autonity
 
 FROM python:3.7.3-alpine
 
