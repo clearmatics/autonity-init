@@ -64,6 +64,12 @@ def main():
                         default=False,
                         help='Enable debug level. (default: %(default)s)'
                         )
+    parser.add_argument('--account-import-only',
+                        dest='account_import_only',
+                        type=bool,
+                        default=False,
+                        help='Skip all init steps exclude import account. (default: %(default)s)'
+                        )
     args = parser.parse_args()
 
     if not path.exists(keys_path + '/keystore'):
@@ -71,7 +77,7 @@ def main():
         import_account(args.debug)
     else:
         print('INFO ==== Skip autonity account private key import: ' + keys_path + '/keystore is already exist.')
-    if not path.exists(blockchain_path + 'autonity'):
+    if (not path.exists(blockchain_path + 'autonity')) and (not args.account_import_only):
         print('INFO ==== Start autonity init step')
         if not path.exists(genesis_path) and args.debug:
             print('Waiting until ' + genesis_path + ' will present ...')
@@ -79,7 +85,10 @@ def main():
             time.sleep(10)
         blockchain_init(args.debug)
     else:
-        print('INFO ==== Skip autonity init step: ' + blockchain_path + 'autonity is already exist.')
+        if args.account_import_only:
+            print('INFO ==== Skip autonity init step')
+        else:
+            print('INFO ==== Skip autonity init step: ' + blockchain_path + 'autonity is already exist.')
     print('INFO ==== Initial steps completed')
 
 

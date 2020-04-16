@@ -1,6 +1,6 @@
 FROM clearmatics/autonity:v0.4.0 as autonity
 
-FROM python:3.7.3-alpine
+FROM python:3.8.2-alpine3.11
 
 RUN apk add --no-cache --virtual .build-deps gcc musl-dev
 
