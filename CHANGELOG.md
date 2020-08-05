@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+## [1.0.8] - 2020-08-05
+- Autonity base image `v0.4.1` 
+
 ## [1.0.7] - 2020-04-16
 - Support option `--account-import-only` (default: `false`)
 - Up base docker image to `python:3.8.2-alpine3.11`
