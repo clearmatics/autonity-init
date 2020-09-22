@@ -9,20 +9,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ## [1.0.8] - 2020-08-05
-- Autonity base image `v0.4.1` 
+- Autonity base image `v0.4.1`
 
 ## [1.0.7] - 2020-04-16
 - Support option `--account-import-only` (default: `false`)
 - Up base docker image to `python:3.8.2-alpine3.11`
 
 ## [1.0.6] - 2020-04-06
-- Autonity base image `v0.4.0` 
+- Autonity base image `v0.4.0`
 
 ## [dev-0.3.2] - 2020-03-05
-- Autonity base image `dev-0.3.2 ` 
+- Autonity base image `dev-0.3.2 `
 
 ## [1.0.4] - 2019-11-15
-- Autonity base image `v0.3.0` 
+- Autonity base image `v0.3.0`
 
 ## [1.0.3] - 2019-10-15
 - Add loop to wait until genesis.json will present
