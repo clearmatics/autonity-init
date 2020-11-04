@@ -1,7 +1,7 @@
 # Autonity-init
 This container used for initialisation autonity in kubernetes cluster  
-* [autonity-network](https://github.com/clearmatics/charts-ose/tree/master/stable/autonity-network)  
-* [autohity](https://github.com/clearmatics/charts-ose/tree/master/stable/autonity)
+* [autonity-network](https://github.com/clearmatics/charts-ose-helm3/tree/master/stable/autonity-network)  
+* [autohity](https://github.com/clearmatics/charts-ose-helm3/tree/master/stable/autonity)
 
 # It will:
 
