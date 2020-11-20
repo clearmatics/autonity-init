@@ -4,6 +4,10 @@ All notable changes to this chart will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.10] - 2020-11-20
+### Added
+- Add support for Autonity v0.7.0 [issue #12](https://github.com/clearmatics/autonity-init/issues/12)
+
 ## [1.0.9] - 2020-09-22
 - Autonity base image `v0.6.0` [issue #9](https://github.com/clearmatics/autonity-init/issues/9)
 
