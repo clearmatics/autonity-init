@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntui-20.04
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
       - name: Get variables from GitHub
         id: git_vars
