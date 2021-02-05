@@ -1,4 +1,6 @@
-FROM clearmatics/autonity:v0.7.1 as autonity
+FROM ghcr.io/clearmatics/autonity:v0.7.1 as autonity
+
+LABEL org.opencontainers.image.source https://github.com/clearmatics/autonity-init
 
 FROM python:3.8.2-alpine3.11
 
