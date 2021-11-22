@@ -1,7 +1,10 @@
+:warning: Archived!
+
 # Autonity-init
-This Docker image is used for initialisation Autonity in a Kubernetes cluster and is used alongside the below Helm charts:
-* [autonity-network](https://github.com/clearmatics/charts-ose-helm3/tree/master/stable/autonity-network)
+This Docker image was used for initialisation Autonity in a Kubernetes cluster and is used alongside the below Helm charts:
 * [autonity](https://github.com/clearmatics/charts-ose-helm3/tree/master/stable/autonity)
+
+This process has now been replaced by extening the Helm chart to manage the keys within GitHub Secrets, or manually.
 
 ## Description
 1. If the `keystore` does not exist:
